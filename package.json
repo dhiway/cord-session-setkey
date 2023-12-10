@@ -1,0 +1,25 @@
+{
+  "author": "Dhiway Engineering <engineering@dhiway.com",
+  "description": "A commandline API interface for interacting with a CORD process to set the session key",
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/dhiway/cord-session-setkey#readme",
+  "license": "Apache-2.0",
+  "name": "@cord.network/session-setkey",
+  "sideEffects": false,
+  "type": "module",
+  "version": "0.9.0",
+  "main": "index.js",
+  "scripts": {
+      "set-key": "tsx src/system-setKeys.ts"
+  },
+  "dependencies": {
+    "@cord.network/sdk": "^0.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.1",
+      "tsx": "latest",
+      "typescript": "^5.3.2"
+  }
+}

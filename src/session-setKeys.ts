@@ -16,7 +16,7 @@ async function main() {
   const api = Cord.ConfigService.get('api')
 
   try {
-      const nodeKey = await Cord.Utils.Crypto.makeKeypairFromUri(
+      const nodeKey = await Cord.Utils.Crypto.makeKeypairFromSeed(
 	  KEY_SEED,
 	  'sr25519'
       )

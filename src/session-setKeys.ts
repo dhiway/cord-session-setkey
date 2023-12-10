@@ -1,13 +1,13 @@
 import * as Cord from '@cord.network/sdk'
 
 const {
-  KEY_SEED,
+  SECRET,
   SESSIONKEYS,
 } = process.env;
 
 async function main() {
-  if (!KEY_SEED || !SESSIONKEYS) {
-      console.log("Missing ENV variables (KEY_SEED || SESSIONKEYS)");
+  if (!SECRET || !SESSIONKEYS) {
+      console.log("Missing ENV variables (SECRET || SESSIONKEYS)");
       return;
   }
   const networkAddress = 'ws://127.0.0.1:9944'
@@ -17,7 +17,7 @@ async function main() {
 
   try {
       const nodeKey = await Cord.Utils.Crypto.makeKeypairFromSeed(
-	  KEY_SEED,
+          SECRET,
 	  'sr25519'
       )
       
